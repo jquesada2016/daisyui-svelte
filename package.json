@@ -6,6 +6,7 @@
 		"name": "Jose Quesada",
 		"email": "jquesada2016@fau.edu"
 	},
+	"module": "./src/lib/index.ts",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
@@ -17,16 +18,18 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
+		"autoprefixer": "^10.3.7",
+		"cssnano": "^5.0.8",
+		"daisyui": "^1.16.6",
+		"postcss": "^8.3.9",
+		"postcss-load-config": "^3.1.0",
 		"svelte": "^3.44.0",
 		"svelte-check": "^2.2.6",
 		"svelte-preprocess": "^4.9.8",
+		"svelte2tsx": "^0.4.12",
+		"tailwindcss": "^3.0.7",
 		"tslib": "^2.3.1",
-		"typescript": "^4.4.3",
-		"postcss": "^8.3.9",
-		"postcss-load-config": "^3.1.0",
-		"autoprefixer": "^10.3.7",
-		"cssnano": "^5.0.8",
-		"tailwindcss": "next"
+		"typescript": "^4.4.3"
 	},
 	"type": "module"
 }
