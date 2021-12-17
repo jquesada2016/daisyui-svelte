@@ -6,7 +6,7 @@
 		"name": "Jose Quesada",
 		"email": "jquesada2016@fau.edu"
 	},
-	"module": "./src/lib/index.ts",
+	"main": "./src/lib/index.ts",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
