@@ -119,8 +119,9 @@
     class:btn-active={active}
     class:loading
     class:btn-disabled={disabled}
-    on:click><slot /></button
-  >
+    on:click
+    ><slot />
+  </button>
 {:else}
   <a
     class={`btn ${sizeClass} ${kindClass} ${shapeClass} ${
