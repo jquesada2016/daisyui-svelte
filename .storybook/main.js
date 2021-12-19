@@ -1,7 +1,4 @@
 module.exports = {
-  "core": {
-    "builder": "storybook-builder-vite"
-  },
   "stories": [
     "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx|svelte)"
@@ -23,18 +20,18 @@ module.exports = {
   "svelteOptions": {
     "preprocess": require("svelte-preprocess")()
   },
-  "viteFinal": async (config) => {
-    const alias = (await import("../svelte.config.js")).default.kit.vite.resolve.alias;
+  // "viteFinal": async (config) => {
+  //   const alias = (await import("../svelte.config.js")).default.kit.vite.resolve.alias;
 
-    return {
-      ...config,
-      resolve: {
-        ...config.resolve,
-        alias: {
-          ...config.resolve.alias,
-          ...alias,
-        }
-      }
-    };
-  }
+  //   return {
+  //     ...config,
+  //     resolve: {
+  //       ...config.resolve,
+  //       alias: {
+  //         ...config.resolve.alias,
+  //         ...alias,
+  //       }
+  //     }
+  //   };
+  // }
 }

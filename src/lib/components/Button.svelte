@@ -1,5 +1,10 @@
 <script lang="ts">
   // Props
+  /**
+   * @description Sets the size of the button.
+   *
+   * @type "a" | "b"
+   */
   export let size: "xs" | "sm" | "md" | "lg" = "md";
   export let kind:
     | "primary"

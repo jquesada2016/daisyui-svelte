@@ -24,6 +24,8 @@
     "@storybook/addon-links": "^6.4.9",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addon-svelte-csf": "^1.1.0",
+    "@storybook/builder-webpack5": "^6.4.9",
+    "@storybook/manager-webpack5": "^6.4.9",
     "@storybook/svelte": "^6.4.9",
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/kit": "next",
