@@ -3,7 +3,7 @@
   import { Button } from "../lib/components";
 </script>
 
-<Meta title="Example/Button" component={Button} />
+<Meta title="Button" component={Button} />
 
 <Template let:args>
   <Button {...args}>
