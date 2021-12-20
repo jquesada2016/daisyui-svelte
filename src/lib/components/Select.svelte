@@ -1,6 +1,7 @@
 <script lang="ts">
   // Props
   export let label = "";
+  export let value: string | undefined = undefined;
   export let options: any[] = [];
   export let kind:
     | "primary"
@@ -27,9 +28,10 @@
   class:select-success={kind === "success"}
   class:select-warning={kind === "warning"}
   class:select-error={kind === "error"}
+  bind:value
 >
   <option disabled selected>{label}</option>
-  {#each options as option}
-    <option>{option}</option>
+  {#each options as option, i}
+    <option value={i}>{option}</option>
   {/each}
 </select>
