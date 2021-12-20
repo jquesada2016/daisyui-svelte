@@ -6,14 +6,9 @@
 <Meta title="Kbd" component={Kbd} />
 
 <Template let:args>
-  <Kbd key="CTRL" />
+  <Kbd key="CTRL" {...args} />
   +
-  <Kbd key="C" />
+  <Kbd key="C" {...args} />
 </Template>
 
-<Story
-  name="Kbd"
-  args={{
-    keys: ["ctrl", "C"],
-  }}
-/>
+<Story name="Kbd" />
