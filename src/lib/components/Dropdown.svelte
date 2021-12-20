@@ -3,29 +3,28 @@
   import { createEventDispatcher } from "svelte";
 
   // Props
-  export let placement: "bottom" | "top" | "left" | "right" = "bottom";
-  export let hover = false;
+  export let menuItems: any[] = [];
+  export let placement: "top" | "left" | "right" | "bottom" = "bottom";
   export let end = false;
-  export let items: any[] = [];
 
   const dispatch = createEventDispatcher();
 </script>
 
 <div
-  class="dropdown text-base-content"
+  class="dropdown"
   class:dropdown-end={end}
   class:dropdown-top={placement === "top"}
   class:dropdown-left={placement === "left"}
   class:dropdown-right={placement === "right"}
 >
-  <slot />
+  <span tabindex="0"><slot /></span>
   <ul
     tabindex="0"
-    class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52 max-h-96 overflow-y-auto"
+    class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52"
   >
-    {#each items as item, i}
-      <li on:click={() => dispatch("click", { index: i, item })}>
-        <a><slot name="item" {item} /></a>
+    {#each menuItems as menuItem}
+      <li>
+        <a><slot name="menu-item" {menuItem} /></a>
       </li>
     {/each}
   </ul>
