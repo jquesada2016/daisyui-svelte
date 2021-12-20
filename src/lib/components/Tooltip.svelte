@@ -12,11 +12,12 @@
     | "warning"
     | "error"
     | undefined = undefined;
+  export let classes = "";
 </script>
 
 <div
   data-tip={tip}
-  class="tooltip"
+  class={`tooltip ${classes}`}
   class:tooltip-left={placement === "left"}
   class:tooltip-right={placement === "right"}
   class:tooltip-bottom={placement === "bottom"}
@@ -27,6 +28,7 @@
   class:tooltip-success={kind === "success"}
   class:tooltip-warning={kind === "warning"}
   class:tooltip-error={kind === "error"}
+  {...$$restProps}
 >
   <slot />
 </div>
