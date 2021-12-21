@@ -13,6 +13,7 @@
     | "error"
     | undefined = undefined;
   export let size: "xs" | "sm" | "md" | "lg" | undefined = undefined;
+  export let values: string[] | undefined = undefined;
 </script>
 
 <select
@@ -35,7 +36,7 @@
 >
   <option disabled selected>{label}</option>
   {#each options as option, i}
-    <option value={i}>
+    <option value={values?.[i] || i}>
       {#if !$$slots.default}
         {option}
       {:else}
