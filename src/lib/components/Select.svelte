@@ -14,6 +14,11 @@
     | undefined = undefined;
   export let size: "xs" | "sm" | "md" | "lg" | undefined = undefined;
   export let values: string[] | undefined = undefined;
+
+  // we have to account for the label
+  if (values) {
+    values = [undefined, ...values];
+  }
 </script>
 
 <select
