@@ -29,6 +29,9 @@
   class:select-warning={kind === "warning"}
   class:select-error={kind === "error"}
   bind:value
+  on:change
+  on:focus
+  on:blur
 >
   <option disabled selected>{label}</option>
   {#each options as option, i}
