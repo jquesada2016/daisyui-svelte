@@ -10,6 +10,7 @@
 
 <Template let:args>
   <Select {...args} />
+  <Select {...args}>item</Select>
 </Template>
 
 <Story name="Select 1" args={{ label, options }} />

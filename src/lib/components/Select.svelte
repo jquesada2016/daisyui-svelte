@@ -32,6 +32,12 @@
 >
   <option disabled selected>{label}</option>
   {#each options as option, i}
-    <option value={i}>{option}</option>
+    <option value={i}>
+      {#if !$$slots.default}
+        {option}
+      {:else}
+        <slot {i} {option} />
+      {/if}
+    </option>
   {/each}
 </select>
